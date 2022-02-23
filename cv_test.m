@@ -12,12 +12,12 @@ spe=zeros(1,n);
 acc=zeros(1,n);
 tic
     indices=crossvalind('Kfold',N_length,n);
-    for k=1:n %交叉验证k=10，10个包轮流作为测试集
-        test = (indices == k); %获得test集元素在数据集中对应的单元编号
-        train1 = ~test; %train集元素的编号为非test元素的编号
-        train_data=M(:,train1); %从数据集中划分出train样本的数据
-        train_target=out(:,train1); %获得样本集的测试目标
-        test_data=M(:,test); %test样本集
+    for k=1:n
+        test = (indices == k);
+        train1 = ~test; 
+        train_data=M(:,train1); 
+        train_target=out(:,train1); 
+        test_data=M(:,test);
         test_target=out(:,test);
 %      [ind,TTest,acc(k),testtime]=CBAtest(train_data,train_target',test_data,test_target',N);
       [ind,TTest]=entest(N,train_data,train_target',test_data,test_target');
