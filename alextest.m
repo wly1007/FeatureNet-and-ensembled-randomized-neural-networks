@@ -73,10 +73,10 @@ netTransfer = trainNetwork(augimdsTrain,layers,options);
 %     'ColumnSummary','column-normalized');
 layer = 'fc8';
 tic
-%ÌáÈ¡ÑµÁ·Í¼Ïñfc7²ãÊı¾İ
+%æå–è®­ç»ƒå›¾åƒfc7å±‚æ•°æ®
 trainingFeatures = activations(netTransfer, augimdsTrain, layer, ...
 'MiniBatchSize', 32, 'OutputAs', 'columns');
-%ÌáÈ¡²âÊÔÍ¼Ïñfc7²ãÊı¾İ
+%ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½fc7ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 % testFeatures = activations(netTransfer,augimdsValidation,layer, ...
 % 'MiniBatchSize', 32, 'OutputAs', 'columns');
 toc
